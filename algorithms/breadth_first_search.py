@@ -8,12 +8,14 @@ def breadth_first_search(grid, start, end):
 
     while len(queue) > 0:
         node = queue.pop()
+        grid[node] = 2
         if node == end:
             break
         for neighbor in grid.get_neighbors(node):
-            if neighbor not in parents:
+            if grid[neighbor] == 0:
                 queue.appendleft(neighbor)
                 parents[neighbor] = node
+                grid[neighbor] = 1
     
     path = []
     node = end

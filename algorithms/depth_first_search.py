@@ -8,13 +8,14 @@ def depth_first_search(grid, start, end):
 
     while len(stack) > 0:
         node = stack.pop()
+        grid[node] = 2
         if node == end:
             break
-        for neighbor in grid.get_neighbors(node):
-            if neighbor not in parents:
+        for neighbor in grid.get_neighbors(node[0], node[1]):
+            if neighbor is not None and grid[neighbor] == 0:
                 stack.append(neighbor)
                 parents[neighbor] = node
-    
+                grid[neighbor] = 1
     path = []
     node = end
     while node != start:

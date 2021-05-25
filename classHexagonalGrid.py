@@ -7,6 +7,15 @@ class HexagonalGrid:
     def __init__(self, values):
         self.values = values
     
+    def generate_labyrinth(self):
+        self.values[:, :] = 0
+        self.values[ 0, :] = -1
+        self.values[-1, :] = -1
+        self.values[:,  0] = -1
+        self.values[:, -1] = -1
+        self.values[:, 2] = -1
+        
+    
     def get_shape(self):
         return self.values.shape
     
