@@ -1,0 +1,45 @@
+.hex {
+  background: red;
+  /* -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%); */
+  border-radius: 100%;
+  height: 85px;
+  width: 85px;
+  translate: -50% -50%;
+
+  position: absolute;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.3);
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &:hover:before {
+    cursor: pointer;
+    border-radius: 100%;
+    opacity: 1;
+  }
+}
+
+.wall.hex {
+  background: rgb(63, 63, 63);
+}
+
+.free.hex {
+  background: rgb(191, 191, 191);
+}
+
+.start.hex {
+  background: rgb(32, 190, 0);
+}
+
+.end.hex {
+  background: rgb(190, 0, 0);
+}

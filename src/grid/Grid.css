@@ -1,0 +1,8 @@
+.grid {
+    height: 90vh;
+    width: 100%;
+    background: gray;
+
+    position: relative;
+    overflow: hidden;
+}
