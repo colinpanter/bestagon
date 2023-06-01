@@ -6,6 +6,7 @@ Fun with hexagonal grids
 ## Sources
 
 [Pathfinding Visualizer](https://clementmihailescu.github.io/Pathfinding-Visualizer/#)
+
 [Hexagonal grids](https://www.redblobgames.com/grids/hexagons/)
 
 ## Available Scripts
