@@ -6,7 +6,7 @@ import Settings from './settings/Settings';
 import Grid from './grid/Grid';
 
 function App() {
-  const [settings, setSettings] =  useState({tile: 'end'})
+  const [settings, setSettings] =  useState({tile: 'wall'})
   return (
     <div className="App">
       <Settings settings={settings} setSettings={setSettings} />
