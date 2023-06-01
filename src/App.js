@@ -1,15 +1,13 @@
-import { useState } from 'react';
-
 import './App.css';
 
 import Settings from './settings/Settings';
 import Grid from './grid/Grid';
 
 function App() {
-  const [settings, setSettings] =  useState({tile: 'wall'})
+  const settings = {tile: 'wall'}
   return (
     <div className="App">
-      <Settings settings={settings} setSettings={setSettings} />
+      <Settings settings={settings} />
       <Grid settings={settings} />
     </div>
   );

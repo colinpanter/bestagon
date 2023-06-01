@@ -4,9 +4,9 @@ import TileTypeRadioBtn from "./TileTypeRadioBtn";
 
 
 
-function Settings({settings, setSettings}) {
+function Settings({settings}) {
   return <div className="settings">
-    <TileTypeRadioBtn settings={settings} setSettings={setSettings} />
+    <TileTypeRadioBtn settings={settings} />
   </div>
 }
 

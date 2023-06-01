@@ -1,11 +1,7 @@
-function TileTypeRadioBtn({settings, setSettings}) {
+function TileTypeRadioBtn({settings}) {
   
   function onChangeValue(event) {
-    console.log(event)
-    setSettings({
-      ...settings,
-      tile: event.target.value
-    })
+    settings.tile = event.target.value
   }
 
   return <div onChange={onChangeValue}>
