@@ -9,10 +9,11 @@ function qrs_key(q, r, s) {
 }
 
 
-function Grid() {
-  const settings = {
-    placing: 'start'
-  }
+function Grid({settings}) {
+  // const settings = {
+  //   placing: 'start'
+  // }
+  // console.log(settings)
 
   const dims = {col:26, row:10};
 
@@ -35,8 +36,8 @@ function Grid() {
       let key = qrs_key(q, r, s)
 
       function handleClick() {
-        if (settings.placing === 'start') {setStart([q,r,s])}
-        else if (settings.placing === 'end') {setEnd([q,r,s])}
+        if (settings.tile === 'start') {setStart([q,r,s])}
+        else if (settings.tile === 'end') {setEnd([q,r,s])}
         else {setStates(states.map((s, i) => {return i===num ? (states[num] === 'wall' ? 'free' : 'wall') : s}))}
       }
       
