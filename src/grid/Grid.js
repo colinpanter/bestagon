@@ -10,12 +10,7 @@ function qrs_key(q, r, s) {
 
 
 function Grid({settings}) {
-  // const settings = {
-  //   placing: 'start'
-  // }
-  // console.log(settings)
-
-  const dims = {col:26, row:10};
+  const dims = {col:23, row:9};
 
   let init_states = new Array(dims.col * dims.col);
   init_states.fill('free')
@@ -23,8 +18,7 @@ function Grid({settings}) {
   const grid = new Map();
   const hexs = [];
 
-  let [start, setStart] = useState([0,0,0])
-  let [end, setEnd] = useState([0,1,-1])
+  let [endpoints, setEnpoints] = useState({start:[0,0,0], end:[0,1,-1]})
 
   for (let i=0; i<dims.col; i++) {
     for (let j=0; j<dims.row; j++) {
@@ -36,12 +30,12 @@ function Grid({settings}) {
       let key = qrs_key(q, r, s)
 
       function handleClick() {
-        if (settings.tile === 'start') {setStart([q,r,s])}
-        else if (settings.tile === 'end') {setEnd([q,r,s])}
+        if (settings.tile === 'start') {setEnpoints({...endpoints, start:[q,r,s]})}
+        else if (settings.tile === 'end') {setEnpoints({...endpoints, end:[q,r,s]})}
         else {setStates(states.map((s, i) => {return i===num ? (states[num] === 'wall' ? 'free' : 'wall') : s}))}
       }
       
-      let hex = <Hexagon position={[q, r, s]} endpoints={{start:start, end:end}} state={states[num]} onClick={handleClick} />
+      let hex = <Hexagon position={[q, r, s]} endpoints={endpoints} state={states[num]} onClick={handleClick} />
       hexs.push(hex);
 
       grid.set(key, num)
