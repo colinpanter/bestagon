@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bestagon/static/css/main.33856b52.css",
+    "main.js": "/bestagon/static/js/main.14b675fe.js",
+    "static/js/787.b701888c.chunk.js": "/bestagon/static/js/787.b701888c.chunk.js",
+    "index.html": "/bestagon/index.html",
+    "main.33856b52.css.map": "/bestagon/static/css/main.33856b52.css.map",
+    "main.14b675fe.js.map": "/bestagon/static/js/main.14b675fe.js.map",
+    "787.b701888c.chunk.js.map": "/bestagon/static/js/787.b701888c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33856b52.css",
+    "static/js/main.14b675fe.js"
+  ]
+}
