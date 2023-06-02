@@ -7,11 +7,24 @@
 }
 
 .start.hex {
-  fill: rgb(32, 190, 0);
+  fill: rgb(32, 191, 0);
 }
 
 .end.hex {
-  fill: rgb(190, 0, 0);
+  fill: rgb(191, 0, 0);
+}
+
+.queued.hex {
+  fill: rgb(127, 127, 191);
+
+}
+
+.visited.hex {
+  fill: rgb(127, 191, 191);
+}
+
+.path.hex {
+  fill: rgb(191, 191, 127);
 }
 
 .hex {
