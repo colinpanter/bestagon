@@ -1,14 +1,18 @@
+import RadioButton from "../components/RadioButton";
+
 function TileTypeRadioBtn({settings}) {
   
   function onChangeValue(event) {
     settings.tile = event.target.value
+    // setSettings({...settings, tile: event.target.value})
   }
 
-  return <div onChange={onChangeValue}>
-      <input type="radio" value="wall" name="gender" defaultChecked="checked" /> Wall
-      <input type="radio" value="start" name="gender" /> Start
-      <input type="radio" value="end" name="gender" /> End
-    </div>
+  return <RadioButton
+    choices={['wall', "start", "end"]}
+    initChoice={"wall"}
+    name="TileType"
+    onChange={onChangeValue}
+  />
 }
 
 export default TileTypeRadioBtn;

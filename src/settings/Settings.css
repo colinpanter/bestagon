@@ -1,6 +1,16 @@
 .settings {
-    height: 10vh;
+    display: flex;
+
+    height: 100px;
     width: 100%;
     background: black;
-    color: white 
+    color: white;
+
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
 }

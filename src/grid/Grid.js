@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Hexagon from './Hexagon';
 import { qrs_key } from './utils';
 import dijkstra from './pathfinders/dijkstra';
@@ -7,7 +7,13 @@ import "./Grid.css";
 
 
 function Grid({settings}) {
-  const dims = {col:23, row:9};
+  console.log(settings)
+  const [size, setSize] = useState({width: window.innerWidth, height: window.innerHeight-100});
+  useEffect(() => {
+    window.addEventListener("resize", () => setSize({width: window.innerWidth, height: window.innerHeight-100}));
+  }, []);
+  const scale = settings.scale.value
+  const dims = {col:Math.ceil(((4/3) * size.width/116 + 0.5)/scale), row:Math.ceil((size.height/100)/scale)};
 
   let init_states = new Array(dims.col * dims.col);
   init_states.fill('free')
@@ -36,7 +42,7 @@ function Grid({settings}) {
         }
       }
       
-      let hex = <Hexagon position={[q, r, s]} endpoints={endpoints} state={states[num]} onClick={handleClick} />
+      let hex = <Hexagon position={[q, r, s]} endpoints={endpoints} state={states[num]} onClick={handleClick} scale={scale} />
       hexs.push(hex);
 
       grid.set(key, num)
@@ -47,6 +53,7 @@ function Grid({settings}) {
     }
   }
   settings.startPathfinding = () => {dijkstra([...states], setStates, endpoints, grid)}
+  // setSettings({...settings, startPathfinding: () => {dijkstra([...states], setStates, endpoints, grid)}})
 
   return (
     <div className='grid'>

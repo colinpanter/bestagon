@@ -5,16 +5,17 @@ import "./Hexagon.css";
 function equal(p1, p2) {return p1[0]===p2[0] && p1[1]===p2[1] && p1[2]===p2[2]}
 
 
-function Hexagon({ position, endpoints, state, onClick }) {
+function Hexagon({ position, endpoints, state, onClick, scale=1. }) {
   
-  const x = 100 * (Math.sqrt(3)/2 * position[0])
-  const y = 100 * (position[1]  +  position[0]/2)
+  const x = scale * 100 * (Math.sqrt(3)/2 * position[0])
+  const y = scale * 100 * (position[1]  +  position[0]/2)
 
   const style = {
     left: `${x}px`,
     top: `${y}px`,
     translate: "-50% -50%",
-    position: "absolute"
+    position: "absolute",
+    transform: `scale(${scale})`
   };
   
   if (equal(endpoints.start, position)) {state = 'start'}
