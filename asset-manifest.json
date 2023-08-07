@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bestagon/static/css/main.82aff9d5.css",
-    "main.js": "/bestagon/static/js/main.b18bc813.js",
+    "main.css": "/bestagon/static/css/main.cc915707.css",
+    "main.js": "/bestagon/static/js/main.554bf25a.js",
     "static/js/787.b701888c.chunk.js": "/bestagon/static/js/787.b701888c.chunk.js",
     "index.html": "/bestagon/index.html",
-    "main.82aff9d5.css.map": "/bestagon/static/css/main.82aff9d5.css.map",
-    "main.b18bc813.js.map": "/bestagon/static/js/main.b18bc813.js.map",
+    "main.cc915707.css.map": "/bestagon/static/css/main.cc915707.css.map",
+    "main.554bf25a.js.map": "/bestagon/static/js/main.554bf25a.js.map",
     "787.b701888c.chunk.js.map": "/bestagon/static/js/787.b701888c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82aff9d5.css",
-    "static/js/main.b18bc813.js"
+    "static/css/main.cc915707.css",
+    "static/js/main.554bf25a.js"
   ]
 }
